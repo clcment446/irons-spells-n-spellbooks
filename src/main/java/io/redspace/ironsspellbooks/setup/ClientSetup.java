@@ -22,6 +22,8 @@ import io.redspace.ironsspellbooks.entity.armor.netherite.NetheriteMageArmorRend
 import io.redspace.ironsspellbooks.entity.armor.pumpkin.PumpkinArmorModel;
 import io.redspace.ironsspellbooks.entity.armor.pumpkin.PumpkinArmorRenderer;
 import io.redspace.ironsspellbooks.entity.armor.simple_wizard.WizardArmorRenderer;
+import io.redspace.ironsspellbooks.entity.dragon.TestDragonModel;
+import io.redspace.ironsspellbooks.entity.dragon.TestDragonRenderer;
 import io.redspace.ironsspellbooks.entity.mobs.dead_king_boss.DeadKingRenderer;
 import io.redspace.ironsspellbooks.entity.mobs.debug_wizard.DebugWizardRenderer;
 import io.redspace.ironsspellbooks.entity.mobs.frozen_humanoid.FrozenHumanoidRenderer;
@@ -151,6 +153,7 @@ public class ClientSetup {
         event.registerLayerDefinition(AngelWingsModel.ANGEL_WINGS_LAYER, AngelWingsModel::createLayer);
         event.registerLayerDefinition(EnergySwirlLayer.Vanilla.ENERGY_LAYER, () -> energyOverlayLayer);
         event.registerLayerDefinition(BallLightningRenderer.MODEL_LAYER_LOCATION, BallLightningRenderer::createBodyLayer);
+        event.registerLayerDefinition(TestDragonModel.LAYER_LOCATION, TestDragonModel::createBodyLayer);
     }
 
     @SubscribeEvent
@@ -292,6 +295,7 @@ public class ClientSetup {
         event.registerEntityRenderer(EntityRegistry.LIGHTNING_STRIKE.get(), NoopRenderer::new);
         event.registerEntityRenderer(EntityRegistry.CULTIST.get(), CultistRenderer::new);
         event.registerEntityRenderer(EntityRegistry.BALL_LIGHTNING.get(), BallLightningRenderer::new);
+        event.registerEntityRenderer(EntityRegistry.DRAGON.get(), TestDragonRenderer::new);
 
         event.registerBlockEntityRenderer(BlockRegistry.SCROLL_FORGE_TILE.get(), ScrollForgeRenderer::new);
         event.registerBlockEntityRenderer(BlockRegistry.PEDESTAL_TILE.get(), PedestalRenderer::new);
