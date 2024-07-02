@@ -11,7 +11,7 @@ import org.jetbrains.annotations.Nullable;
 
 public class TestDragonRenderer extends LivingEntityRenderer<DragonEntity, TestDragonModel> {
 
-    ResourceLocation resourceLocation = IronsSpellbooks.id("textures/entity/dragon.png");
+    ResourceLocation resourceLocation = IronsSpellbooks.id("textures/entity/dragon/dragon.png");
     TestDragonModel model;
 
     public TestDragonRenderer(EntityRendererProvider.Context pContext) {
