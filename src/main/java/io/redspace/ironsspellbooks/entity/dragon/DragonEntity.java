@@ -1,7 +1,5 @@
 package io.redspace.ironsspellbooks.entity.dragon;
 
-import io.redspace.ironsspellbooks.IronsSpellbooks;
-import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
@@ -36,6 +34,9 @@ public class DragonEntity extends LivingEntity {
             //testAnimationState.startIfStopped(this.tickCount);
             if (!this.isOnGround()) {
                 testAnimationState.startIfStopped(this.tickCount);
+            }
+            if (testAnimationState.isStarted() && testAnimationState.getAccumulatedTime() > TestDragonAnimation.test_animation.lengthInSeconds() * 1000f) {
+                testAnimationState.stop();
             }
         }
     }
