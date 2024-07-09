@@ -6,9 +6,9 @@ import net.minecraft.world.level.Level;
 
 import java.util.List;
 
-public class DragonEntity extends LivingEntity {
+public class DragonEntity extends Mob {
 
-    public DragonEntity(EntityType<? extends LivingEntity> pEntityType, Level pLevel) {
+    public DragonEntity(EntityType<? extends Mob> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
     }
 
